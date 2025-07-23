@@ -1,0 +1,91 @@
+/* JobList.css — Professional, modern & visually engaging */
+
+.job-list-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 40px;
+  font-family: 'Segoe UI', 'Open Sans', sans-serif;
+  background-color: #f9fbff;
+}
+
+.job-list-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.no-jobs {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 40px;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.job-card {
+  background-color: #ffffff;
+  border-left: 5px solid #0876dd;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 85, 160, 0.12);
+  border-left-color: #005bbd;
+}
+
+.job-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.job-description {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.job-skills {
+  font-size: 14px;
+  color: #006699;
+  background-color: #eef6fc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: auto;
+}
+
+/* Optional: Add Learn More Button for Interaction */
+.job-card::after {
+  content: "Learn More →";
+  font-size: 13px;
+  font-weight: 500;
+  color: #0077cc;
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.job-card:hover::after {
+  opacity: 1;
+}

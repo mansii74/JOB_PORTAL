@@ -1,0 +1,141 @@
+/* MatchOnlineJobs.css — Professional layout for job matching results */
+
+.match-online-jobs-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 24px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.match-online-jobs-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.match-form {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(4, 108, 154, 0.08);
+  margin-bottom: 40px;
+}
+
+.match-form label {
+  font-weight: 500;
+  color: #054974;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.match-form select,
+.match-form input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1.5px solid #c8d4db;
+  border-radius: 8px;
+  background-color: #f9fbff;
+  transition: border-color 0.2s;
+}
+
+.match-form select:focus,
+.match-form input:focus {
+  outline: none;
+  border-color: #0cadf3;
+  background-color: #ffffff;
+}
+
+.match-form button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.match-form button:disabled {
+  background-color: #a3d3b0;
+  cursor: not-allowed;
+}
+
+.match-form button:hover:not(:disabled) {
+  background-color: #217a38;
+}
+
+.match-results-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.job-match-card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #0876dd;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.3s ease;
+}
+
+.job-match-card:hover {
+  border-left-color: #005bbd;
+}
+
+.job-match-card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #003e75;
+}
+
+.job-meta {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.job-score {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2a9445;
+  margin-top: 10px;
+}
+
+.job-keywords {
+  font-size: 13px;
+  color: #444;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.match-no-results,
+.match-loading {
+  text-align: center;
+  font-size: 15px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.apply-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #0876dd;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.apply-link:hover {
+  color: #005bbd;
+}

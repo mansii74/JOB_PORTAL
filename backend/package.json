@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@ariajdev/company-colored-icon": "^1.0.1",
+    "react-techs-logos": "^0.2.2"
+  }
+}

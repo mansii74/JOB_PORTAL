@@ -1,0 +1,90 @@
+/* ResumeMatchAllJobs.css - Professionally styled resume-job matching view */
+
+.resume-match-container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 35px;
+  background-color: #f8fbff;
+  border-radius: 12px;
+  font-family: 'Segoe UI', 'Open Sans', sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 85, 160, 0.08);
+  color: #003366;
+}
+
+.resume-match-header {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.resume-match-form {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.resume-selector {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccd6e0;
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+.resume-submit-button {
+  padding: 10px 18px;
+  font-size: 14px;
+  background-color: #0876dd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.resume-submit-button:hover:not(:disabled) {
+  background-color: #005bbd;
+}
+
+.resume-submit-button:disabled {
+  background-color: #c4d9f2;
+  cursor: not-allowed;
+}
+
+.match-results-section {
+  margin-top: 20px;
+}
+
+.match-results-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.job-match-card {
+  background-color: #ffffff;
+  border-left: 6px solid #28a745;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 100, 150, 0.05);
+}
+
+.job-match-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.job-match-card p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.job-match-card p strong {
+  color: #003e75;
+}

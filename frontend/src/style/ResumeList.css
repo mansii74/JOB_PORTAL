@@ -1,0 +1,57 @@
+.resume-list-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fbff;
+  min-height: 100vh;
+}
+
+.resume-list-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #003366; /* Professional Navy Blue */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.resume-card {
+  background-color: #ffffff;
+  border-left: 5px solid #0876dd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-3px);
+}
+
+.resume-card p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.resume-card strong {
+  color: #1a1a1a;
+}
+
+.view-button {
+  margin-top: 10px;
+  background-color: #0876dd;
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #005bbd;
+}

@@ -1,0 +1,80 @@
+/* JobMatch.css - matching form styled professionally */
+
+.job-match-container {
+  max-width: 550px;
+  margin: 40px auto;
+  background-color: #f8fbff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 85, 170, 0.1);
+  font-family: 'Segoe UI', 'Open Sans', sans-serif;
+  color: #003366;
+}
+
+.job-match-container h2 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.job-match-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1.5px solid #ccd6e0;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.job-match-input:focus {
+  border-color: #0876dd;
+  box-shadow: 0 0 5px rgba(8, 118, 221, 0.3);
+}
+
+.job-match-button {
+  background-color: #28a745;
+  color: white;
+  font-weight: 600;
+  padding: 10px 28px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.job-match-button:hover:not(:disabled) {
+  background-color: #1e7e34;
+}
+
+.job-match-button:disabled {
+  background-color: #95d5a1;
+  cursor: not-allowed;
+}
+
+.match-result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e6f0ff;
+  border-radius: 10px;
+  border-left: 6px solid #0876dd;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #003366;
+}
+
+.match-result p {
+  margin: 8px 0;
+}
+
+.match-result strong {
+  font-weight: 700;
+}
