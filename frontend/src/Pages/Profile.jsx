@@ -5,6 +5,8 @@ const Profile = () => {
   const [profile, setProfile] = useState(null);
   const [error, setError] = useState('');
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   const fetchProfile = async () => {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -13,10 +15,10 @@ const Profile = () => {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/profile/', {
+      const response = await fetch(`${API_BASE_URL}/profile/`, {
         headers: {
-          'Authorization': `Bearer ${token}`
-        }
+          'Authorization': `Bearer ${token}`,
+        },
       });
 
       if (!response.ok) {

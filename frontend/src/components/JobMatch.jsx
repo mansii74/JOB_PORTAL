@@ -8,11 +8,16 @@ function JobMatch() {
   const [result, setResult] = useState(null);
 
   const handleMatch = async () => {
-    const res = await API.post('http://localhost:8000/api/resume/match/', {
-      resume_id: resumeId,
-      job_id: jobId
-    });
-    setResult(res.data);
+    try {
+      const res = await API.post('/resume/match/', {
+        resume_id: resumeId,
+        job_id: jobId,
+      });
+      setResult(res.data);
+    } catch (err) {
+      console.error('Error matching resume and job:', err);
+      setResult(null);
+    }
   };
 
   return (

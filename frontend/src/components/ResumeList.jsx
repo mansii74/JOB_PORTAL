@@ -1,25 +1,27 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import '../style/ResumeList.css'; // ✅ Add this import
+import '../style/ResumeList.css';
 
 function ResumeList() {
   const [resumes, setResumes] = useState([]);
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   useEffect(() => {
     const token = localStorage.getItem("token");
 
     axios
-      .get("http://localhost:8000/api/resumes/", {
+      .get(`${API_BASE_URL}/resumes/`, {
         headers: {
           Authorization: `Token ${token}`,
         },
       })
       .then((res) => setResumes(res.data))
       .catch((err) => console.error(err));
-  }, []);
+  }, [API_BASE_URL]);
 
   const handleViewFile = (fileUrl) => {
-    const finalUrl = fileUrl.startsWith("http") ? fileUrl : `http://localhost:8000${fileUrl}`;
+    const finalUrl = fileUrl.startsWith("http") ? fileUrl : `${BASE_URL}${fileUrl}`;
     window.open(finalUrl, "_blank");
   };
 

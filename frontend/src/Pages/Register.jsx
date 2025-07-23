@@ -9,12 +9,14 @@ function Register() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   const handleRegister = async (e) => {
     e.preventDefault();
     setError('');
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/register/', {
+      const response = await fetch(`${API_BASE_URL}/register/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, email }),
@@ -26,7 +28,7 @@ function Register() {
         localStorage.setItem('token', data.token);
         navigate('/');
       } else {
-        setError(data?.error || "Something went wrong. Please try with a different username.");
+        setError(data?.error || 'Something went wrong. Please try with a different username.');
       }
     } catch (err) {
       setError('Server error. Please try again.');

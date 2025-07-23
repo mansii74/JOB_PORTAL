@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import API from '../api/api';
-import '../style/JobList.css'; // ✅ Import your custom CSS file
+import '../style/JobList.css';
 
 function JobList() {
   const [jobs, setJobs] = useState([]);
 
   const fetchJobs = async () => {
     try {
-      const res = await API.get('http://127.0.0.1:8000/api/jobs/');
+      // No need to include full URL; baseURL is handled by API instance
+      const res = await API.get('/jobs/');
       setJobs(res.data);
     } catch (error) {
       console.error("Error fetching jobs:", error);

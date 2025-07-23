@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import '../style/JobPostForm.css'; // ✅ Link CSS
+import '../style/JobPostForm.css';
 
 function JobPostForm() {
   const [title, setTitle] = useState('');
@@ -8,10 +8,12 @@ function JobPostForm() {
   const [skills_required, setSkillRequired] = useState('');
   const [message, setMessage] = useState('');
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/api/jobs/', {
+      await axios.post(`${API_BASE_URL}/jobs/`, {
         title,
         description,
         skills_required,
